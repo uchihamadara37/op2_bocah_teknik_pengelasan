@@ -8,7 +8,7 @@ const servicesData = [
   {
     title: 'Kanopi (Canopy)',
     description: 'Pemasangan kanopi baja ringan dengan berbagai pilihan atap (spandek, polikarikarbonat, dll) untuk melindungi carport atau teras Anda dari cuaca.',
-    images: ['/images/kanopi-1.jpg', '/images/kanopi-2.jpg', '/images/kanopi-3.jpg'],
+    images: ['/produk/kanopi.jpeg', '/images/kanopi-2.jpg', '/images/kanopi-3.jpg'],
   },
   {
     title: 'Folding Gate',
@@ -30,7 +30,7 @@ const servicesData = [
   {
     title: 'Etalase Kaca',
     description: 'Mengerjakan etalase kaca dengan rangka aluminium atau besi untuk display produk toko, konter, atau pameran dengan presisi dan tampilan modern.',
-    images: ['/images/etalase-1.jpg', '/images/etalase-2.jpg', '/images/etalase-3.jpg'],
+    images: ['/produk/etalase(12).jpg', '/images/etalase-2.jpg', '/images/etalase-3.jpg'],
   },
   {
     title: 'Tenda',
@@ -45,7 +45,7 @@ const servicesData = [
   {
     title: 'Railing Tangga',
     description: 'Membuat railing tangga besi dan stainless steel yang fungsional dan elegan, memberikan keamanan sekaligus sentuhan artistik pada interior.',
-    images: ['/images/railing-tangga-1.jpg', '/images/railing-tangga-2.jpg', '/images/railing-tangga-3.jpg'],
+    images: ['/produk/tanggaBesi.jpeg', '/images/railing-tangga-2.jpg', '/images/railing-tangga-3.jpg'],
   },
   {
     title: 'Plafon PVC',
@@ -65,14 +65,9 @@ const servicesData = [
     images: ['/images/huruf-timbul-1.jpg', '/images/huruf-timbul-2.jpg', '/images/huruf-timbul-3.jpg'],
   },
   {
-    title: 'Meja',
+    title: 'Meja atau Kursi',
     description: 'Jasa las untuk pembuatan meja custom dengan kaki besi, seperti meja kafe, meja kerja, atau meja makan dengan desain industrial yang kokoh.',
-    images: ['/images/meja-1.jpg', '/images/meja-2.jpg', '/images/meja-3.jpg'],
-  },
-  {
-    title: 'Kursi',
-    description: 'Pembuatan kursi dan bangku dengan rangka besi yang kuat untuk kafe, teras, atau ruang tunggu. Desain dapat disesuaikan.',
-    images: ['/images/kursi-1.jpg', '/images/kursi-2.jpg', '/images/kursi-3.jpg'],
+    images: ['/produk/Meja-Cafe.jpg', '/images/meja-2.jpg', '/images/meja-3.jpg'],
   },
   {
     title: 'Almari',
