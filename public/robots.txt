@@ -1,0 +1,6 @@
+# Izinkan semua robot mesin pencari
+User-agent: *
+Allow: /
+
+# Tunjukkan lokasi sitemap Anda
+Sitemap: https://op2-bocah-teknik-pengelasan.vercel.app/sitemap.xml
