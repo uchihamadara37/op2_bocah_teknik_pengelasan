@@ -43,7 +43,7 @@ export default function ContactInfo() {
                 window.open('https://wa.me/6289637606973?text=Maaf%20mengganggu,%20benar%20ini%20dengan%20Las%20Bocah%20Teknik?', '_blank');
               }}
             >
-              <FaWhatsapp className="text-green-600 h-6 w-6 m-3 group-hover:text-green-500" />
+              <FaWhatsapp className="h-6 w-6 m-3 text-green-600 group-hover:text-green-500" />
               <div className="flex flex-col">
                 <p className="text-md text-green-600 group-hover:text-green-500">WhatsApp</p>
                 <p className="text-sm"
@@ -55,7 +55,7 @@ export default function ContactInfo() {
                 window.open('https://www.instagram.com/bocahteknik01/?hl=id', '_blank');
               }}
             >
-              <FaInstagram className=" h-6 w-6 m-3 text-pink-500" />
+              <FaInstagram className="h-6 w-6 m-3 text-pink-500" />
               <div className="flex flex-col">
                 <p className="text-md text-pink-500">Instagram</p>
                 <p className="text-sm">@bocahteknik01 <span className='group-hover:text-pink-500'>(click me!)</span> </p>
@@ -66,10 +66,8 @@ export default function ContactInfo() {
                 window.open('https://www.youtube.com/@imamnura7044', '_blank');
               }}
             >
-              <FaYoutube className="text-red-500 w-11 h-11 m-3" />
-              {/* <div className=" h-6 flex justify-center items-center m-3">
-                </div> */}
-              <div className="flex flex-col">
+              <FaYoutube className="h-6 w-6 m-3 text-red-500 " />
+              <div className="flex flex-col max-w-[250px]">
                 <p className="text-md text-red-500">Youtube</p>
                 <p className="text-sm">Kunjungi channel Youtube kami untuk informasi lebih lanjut pengerjaan kami.</p>
               </div>
