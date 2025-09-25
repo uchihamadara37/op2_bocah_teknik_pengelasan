@@ -7,12 +7,16 @@ import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
 import { Phone } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { IoLogoYoutube } from 'react-icons/io5';
+import { use } from 'react';
+import { useViewport } from '@/lib/hooks/useViewport';
 
 export default function ContactInfo() {
+  const isMobile = useViewport().isMobile;
   return (
     <Card id='contact' className="mt-8 mb-14 mx-[10%] text-gray-800 py-0 px-0 border-0 shadow-none">
         <CardContent className="px-0 flex flex-col md:flex-row items-center gap-3 ">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.8740767973377!2d110.55593206427913!3d-8.011919909486396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7bb39ca5eef957%3A0x6cb47ad0da4ce63c!2sBOCAH%20TEKNIK!5e0!3m2!1sid!2sid!4v1758762630004!5m2!1sid!2sid" width="600" height="300" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.8740767973377!2d110.55593206427913!3d-8.011919909486396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7bb39ca5eef957%3A0x6cb47ad0da4ce63c!2sBOCAH%20TEKNIK!5e0!3m2!1sid!2sid!4v1758762630004!5m2!1sid!2sid" width={isMobile ? "300" : "500"} height="300" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"
             className='rounded-lg'
           ></iframe>
           <div className="rounded flex flex-col ">

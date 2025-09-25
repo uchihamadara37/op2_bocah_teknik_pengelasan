@@ -13,12 +13,12 @@ const servicesData = [
   {
     title: 'Folding Gate',
     description: 'Solusi pintu praktis dan aman untuk ruko, garasi, dan gudang. Tersedia dalam berbagai ketebalan slat dan pilihan warna.',
-    images: ['/images/folding-gate-1.jpg', '/images/folding-gate-2.jpg', '/images/folding-gate-3.jpg'],
+    images: ['/produk/foldingGate.jpeg', '/produk/foldingGate2.jpg', '/produk/foldingGate3.jpg'],
   },
   {
     title: 'Rolling Door',
     description: 'Menyediakan rolling door industrial maupun untuk kios dengan material berkualitas yang menjamin keamanan dan kemudahan akses.',
-    images: ['/images/rolling-door-1.jpg', '/images/rolling-door-2.jpg', '/images/rolling-door-3.jpg'],
+    images: ['/images/gerbang.jpg', '/images/gerbang2.png', '/images/gerbang3.jpg'],
   },
   {
     title: 'Balkon (Balcon)',
