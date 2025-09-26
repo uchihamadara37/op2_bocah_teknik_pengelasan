@@ -8,9 +8,9 @@ export default function Navbar() {
       <nav className="container md:max-w-[80%] mx-auto flex items-center justify-between p-4">
         <div className="flex items-center gap-3">
           <Image src="/icon_bocahteknik.png" alt="Logo" width={35} height={35} />
-          <Link href="/" className="text-xl font-semibold text-gray-800">
+          <h1 className="text-xl font-semibold text-gray-800">
             Bocah Teknik
-          </Link>
+          </h1>
         </div>
         <div className="flex items-center gap-2">
           {/* <Button variant="ghost" asChild>
