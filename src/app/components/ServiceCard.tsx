@@ -29,7 +29,7 @@ interface ServiceCardProps {
 export function ServiceCard({ service }: ServiceCardProps) {
   return (
     <Card className="flex flex-col">
-      <CardHeader className="pb-4">
+      <CardHeader className="">
         {/* Carousel Gambar di Dalam Kartu */}
         <Carousel className="w-full rounded-lg overflow-hidden">
           <CarouselContent>
@@ -52,7 +52,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
       </CardHeader>
       
       <CardContent className="flex-grow">
-        <CardTitle className="mb-2">{service.title}</CardTitle>
+        <h3  data-slot="card-title" className="mb-2 font-semibold">{service.title}</h3>
         <CardDescription>{service.description}</CardDescription>
       </CardContent>
     </Card>

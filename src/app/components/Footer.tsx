@@ -38,7 +38,7 @@ const Footer = () => {
                 </div> */}
 
                 <div className="relative z-10 py-4 px-6 lg:px-8 bg-lime-400 text-neutral-700 flex justify-between items-center text-sm md:text-base">
-                    <p>© {new Date().getFullYear()} @2025 Bocah Teknik</p>
+                    <p>© {new Date().getFullYear()} Bocah Teknik. All rights reserved.</p>
 
                     {isVisible && (
                         <div className="" title='Scroll to top'>

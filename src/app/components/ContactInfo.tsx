@@ -38,10 +38,11 @@ export default function ContactInfo() {
                 <p className="font-semibold">Hubungi Kami:</p>
               </div>
             </div>
-            <div className="flex items-start cursor-pointer group"
-              onClick={() => {
-                window.open('https://wa.me/6289637606973?text=Maaf%20mengganggu,%20benar%20ini%20dengan%20Las%20Bocah%20Teknik?', '_blank');
-              }}
+            <a
+              href="https://wa.me/6289637606973?text=Maaf%20mengganggu,%20benar%20ini%20dengan%20Las%20Bocah%20Teknik?"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start cursor-pointer group"
             >
               <FaWhatsapp className="h-6 w-6 m-3 text-green-600 group-hover:text-green-500" />
               <div className="flex flex-col">
@@ -49,19 +50,24 @@ export default function ContactInfo() {
                 <p className="text-sm"
                 >+62-896-3760-6973 <span className='group-hover:text-green-500'>(click me!)</span></p>
               </div>
-            </div>
-            <div className="flex items-start cursor-pointer group"
-              onClick={() => {
-                window.open('https://www.instagram.com/bocahteknik01/?hl=id', '_blank');
-              }}
+            </a>
+            <a
+              href="https://www.instagram.com/bocahteknik01/?hl=id"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start cursor-pointer group"
             >
               <FaInstagram className="h-6 w-6 m-3 text-pink-500" />
               <div className="flex flex-col">
                 <p className="text-md text-pink-500">Instagram</p>
                 <p className="text-sm">@bocahteknik01 <span className='group-hover:text-pink-500'>(click me!)</span> </p>
               </div>
-            </div>
-            <div className="flex items-start cursor-pointer group"
+            </a>
+            <a
+              href="https://www.youtube.com/@imamnura7044"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start cursor-pointer group"
               onClick={() => {
                 window.open('https://www.youtube.com/@imamnura7044', '_blank');
               }}
@@ -71,7 +77,7 @@ export default function ContactInfo() {
                 <p className="text-md text-red-500">Youtube</p>
                 <p className="text-sm">Kunjungi channel Youtube kami untuk informasi lebih lanjut pengerjaan kami.</p>
               </div>
-            </div>
+            </a>
 
           </div>
         </div>
