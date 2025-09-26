@@ -27,7 +27,7 @@ export default function Hero() {
         <div className="flex w-full h-60 md:h-auto md:w-[40%] mt-10 relative items-center justify-center">
           <Image
             src="/logobocahteknik.png"
-            alt="Hero Image"
+            alt="Logo Bocah Teknik"
             fill={true}
             className="object-contain rounded-lg relative z-10 block"
           />

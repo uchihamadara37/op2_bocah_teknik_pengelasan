@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Bocah Teknik - Jasa Pengelasan dan Pembuatan Berbagai Produk Besi",
-  description: "Jasa pengelasan profesional untuk folding gate, rolling door, pagar besi, kanopi, dan lainnya. Hubungi kami untuk layanan berkualitas tinggi.",
+  description: "Jasa pengelasan profesional untuk folding gate, rolling door, pagar besi, kanopi, dan lainnya. Hubungi kami untuk layanan pengelasan berkualitas tinggi dan amanah di Yogyakarta.",
 };
 
 export default function RootLayout({
