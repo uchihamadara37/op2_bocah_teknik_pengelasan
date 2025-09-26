@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Tunjukkan lokasi sitemap Anda
-Sitemap: https://op2-bocah-teknik-pengelasan.vercel.app/sitemap.xml
+Sitemap: https://www.bocahteknik.my.id/sitemap.xml

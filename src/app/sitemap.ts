@@ -4,7 +4,7 @@ import { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://op2-bocah-teknik-pengelasan.vercel.app/', // Ganti dengan URL utama Anda
+      url: 'https://www.bocahteknik.my.id/', // Ganti dengan URL utama Anda
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 1,
