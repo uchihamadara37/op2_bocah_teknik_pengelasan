@@ -35,7 +35,7 @@ export default function HomePage() {
     <>
       <LocalBusinessSchema />
       <main>
-        <Navbar />
+        
         <Hero />
         <ServiceList />
         {/* <Gallery /> */}

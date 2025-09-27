@@ -4,22 +4,48 @@ import Link from 'next/link';
 // Anda mungkin perlu menginstal react-icons untuk ikon WA dan IG
 // npm install react-icons
 import { FaWhatsapp, FaInstagram, FaYoutube } from 'react-icons/fa';
-import { Phone, Youtube } from 'lucide-react';
+import { Loader2, Phone, Youtube } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { IoLogoYoutube } from 'react-icons/io5';
-import { use } from 'react';
+import { use, useState } from 'react';
 import { useViewport } from '@/lib/hooks/useViewport';
 import { FaSquareYoutube } from 'react-icons/fa6';
 
 export default function ContactInfo() {
   const isMobile = useViewport().isMobile;
+  const [isMapLoading, setIsMapLoading] = useState(true);
+
   return (
-    <Card id='contact' className="mt-8 mb-14 mx-[10%] text-gray-800 py-0 px-0 border-0 shadow-none">
+    <Card id='contact' className="mt-8 mb-8 md:mb-14 mx-[10%] text-gray-800 py-0 px-0 border-0 shadow-none">
       <CardContent className="px-0 flex flex-col md:flex-row items-center gap-3 ">
 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.8740767973377!2d110.55593206427913!3d-8.011919909486396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7bb39ca5eef957%3A0x6cb47ad0da4ce63c!2sBOCAH%20TEKNIK!5e0!3m2!1sid!2sid!4v1758762630004!5m2!1sid!2sid" width={isMobile ? "300" : "500"} height="300" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"
-          className='rounded-lg'
-        ></iframe>
+        <div 
+          className="relative rounded-lg overflow-hidden bg-gray-200" 
+          style={{ 
+            width: isMobile ? '300px' : '500px', 
+            height: '300px' 
+          }}
+        >
+          {/* 4. Tampilkan loader jika isMapLoading adalah true */}
+          {isMapLoading && (
+            <div className="absolute inset-0 flex items-center justify-center bg-gray-200 z-10">
+              <Loader2 className="h-8 w-8 text-gray-500 animate-spin" />
+            </div>
+          )}
+
+          {/* 5. iframe sekarang memiliki event onLoad */}
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.8740767973377!2d110.55593206427913!3d-8.011919909486396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7bb39ca5eef957%3A0x6cb47ad0da4ce63c!2sBOCAH%20TEKNIK!5e0!3m2!1sid!2sid!4v1758762630004!5m2!1sid!2sid" 
+            width="100%" 
+            height="100%" 
+            style={{ border: 0 }} 
+            allowFullScreen 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+            className={`transition-opacity duration-300 ${isMapLoading ? 'opacity-0' : 'opacity-100'}`}
+            onLoad={() => setIsMapLoading(false)} // Saat selesai loading, ubah state
+          ></iframe>
+        </div>
         <div className="rounded flex flex-col ">
           <div className="flex flex-col bg-white p-3 rounded-md">
             <div className="alamat flex items-center gap-2 mb-1">
@@ -73,7 +99,7 @@ export default function ContactInfo() {
               }}
             >
               <FaYoutube className="h-6 w-6 m-3 text-red-500 " />
-              <div className="flex flex-col max-w-[250px]">
+              <div className="flex flex-col max-w-[200px] md:max-w-[250px]">
                 <p className="text-md text-red-500">Youtube</p>
                 <p className="text-sm">Kunjungi channel Youtube kami untuk informasi lebih lanjut pengerjaan kami.</p>
               </div>

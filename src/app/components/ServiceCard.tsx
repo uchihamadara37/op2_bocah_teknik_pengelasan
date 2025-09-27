@@ -14,13 +14,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
-
-// Tentukan tipe data untuk props
-type Service = {
-  title: string;
-  description: string;
-  images: string[];
-};
+import { Service } from '../dataStatic/servicesData';
 
 interface ServiceCardProps {
   service: Service;
@@ -50,10 +44,16 @@ export function ServiceCard({ service }: ServiceCardProps) {
           <CarouselNext className="right-2" />
         </Carousel>
       </CardHeader>
-      
+
       <CardContent className="flex-grow">
-        <h3  data-slot="card-title" className="mb-2 font-semibold">{service.title}</h3>
+        <h3 data-slot="card-title" className="mb-2 font-semibold flex justify-between">
+          {service.title}
+          <a href={`/layanan/${encodeURIComponent(service.slug)}`} className="inline-block text-blue-500 hover:underline">
+            Detail {'>'}
+          </a>
+        </h3>
         <CardDescription>{service.description}</CardDescription>
+
       </CardContent>
     </Card>
   );

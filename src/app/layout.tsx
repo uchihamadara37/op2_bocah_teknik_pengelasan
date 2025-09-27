@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bocah Teknik - Jasa Pengelasan dan Pembuatan Berbagai Produk Besi",
+  title: "Bocah Teknik - Jasa Pengelasan di Yogyakarta",
   description: "Jasa pengelasan profesional untuk folding gate, rolling door, pagar besi, kanopi, dan lainnya. Hubungi kami untuk layanan pengelasan berkualitas tinggi dan amanah di Yogyakarta.",
 };
 
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>

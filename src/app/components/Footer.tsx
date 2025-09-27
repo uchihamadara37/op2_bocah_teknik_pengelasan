@@ -32,7 +32,7 @@ const Footer = () => {
 
   return (
     <div>
-        <div className="relative w-full mt-30">
+        <div className="relative w-full mt-8 md:mt-30">
                 <WaveSeparator waveColor="lime" />
                 {/* <div className="absolute inset-x-0 bottom-0 top-0">
                 </div> */}

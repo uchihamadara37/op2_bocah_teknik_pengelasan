@@ -22,7 +22,7 @@ export default function Navbar() {
           <Button 
             variant="secondary"
           asChild>
-            <Link href="#contact" className='font-semibold'>Kontak kami</Link>
+            <Link href="/#contact" className='font-semibold'>Kontak kami</Link>
           </Button>
         </div>
       </nav>

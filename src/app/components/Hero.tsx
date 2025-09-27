@@ -20,7 +20,7 @@ export default function Hero() {
             <span className="text-amber-500">Instalasi Baru</span> Di Yogyakarta
           </h1>
           <p className="text-center md:text-left mt-6 mb-10 text-lg md:text-xl ">
-            Anda membutuhkan jasa pengelasan seperti pemasangan kanopi, pagar, teralis, atau yang lainnya? Kami, <span className='font-bold'>Tim Bocah Teknik</span>, siap sedia memberikan layanan pengelasan terbaik untuk rumah maupun bisnis Anda di wilayah Yogyakarta dan sekitarnya.
+            Anda membutuhkan jasa pengelasan seperti pemasangan kanopi, pagar, teralis, atau yang lainnya? Kami, <span className='font-bold'>Tim Bocah Teknik</span>, siap sedia memberikan layanan pengelasan terbaik untuk rumah maupun bisnis Anda di wilayah Yogyakarta (Jogja) dan sekitarnya.
           </p>
 
         </div>
