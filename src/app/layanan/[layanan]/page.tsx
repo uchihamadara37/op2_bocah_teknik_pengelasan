@@ -14,7 +14,8 @@ type Props = {
 
 // Fungsi untuk generate Metadata SEO secara dinamis
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const service = servicesData.find(s => s.slug === params.layanan);
+  const param = await params;
+  const service = servicesData.find(s => s.slug === param.layanan);
 
   if (!service) {
     return {
@@ -30,9 +31,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 // Komponen Halaman
-export default function DetailLayananPage({ params }: Props) {
+export default async function DetailLayananPage({ params }: Props) {
   // Cari data service berdasarkan slug dari URL
-  const service = servicesData.find(s => s.slug === params.layanan);
+  const param = await params;
+  const service = servicesData.find(s => s.slug === param.layanan);
 
   // Jika service tidak ditemukan, tampilkan halaman 404
   if (!service) {
