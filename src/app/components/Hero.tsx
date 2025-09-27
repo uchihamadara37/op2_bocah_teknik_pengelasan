@@ -16,11 +16,11 @@ export default function Hero() {
       <div className="flex flex-col-reverse md:flex-row justify-between relative z-10 max-w-[80%]">
         <div className="md:pt-20 md:max-w-[55%] lg:max-w-[50%]">
           <h1 className="text-center md:text-left text-2xl md:text-3xl lg:text-4xl font-bold leading-7 md:leading-11 lg:max-w-[80%]">
-            Jasa Pengelasan Profesional dan <span className="text-amber-500">Amanah</span> Baik <span className="text-amber-500">Service</span> Maupun{' '}
+            <span className="text-amber-500">Bocah Teknik</span>, Jasa Las (Pengelasan) Profesional dan <span className="text-amber-500">Amanah</span>, Baik <span className="text-amber-500">Service</span> Maupun{' '}
             <span className="text-amber-500">Instalasi Baru</span> Di Yogyakarta
           </h1>
           <p className="text-center md:text-left mt-6 mb-10 text-lg md:text-xl ">
-            Anda membutuhkan jasa pengelasan seperti pemasangan kanopi, pagar, teralis, atau yang lainnya? Kami, <span className='font-bold'>Tim Bocah Teknik</span>, siap sedia memberikan layanan pengelasan terbaik untuk rumah maupun bisnis Anda di wilayah Yogyakarta (Jogja) dan sekitarnya.
+            Anda membutuhkan jasa pengelasan seperti pemasangan kanopi, pagar, teralis, atau yang lainnya? Kami, Tim las <span className='font-bold'>Bocah Teknik</span>, siap sedia memberikan layanan pengelasan terbaik untuk rumah maupun bisnis Anda di wilayah Yogyakarta (Jogja) dan sekitarnya.
           </p>
 
         </div>

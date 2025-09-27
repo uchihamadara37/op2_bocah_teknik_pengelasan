@@ -50,7 +50,7 @@ export default function ContactInfo() {
           <div className="flex flex-col bg-white p-3 rounded-md">
             <div className="alamat flex items-center gap-2 mb-1">
               {/* <IoMapSharp className="text-red-500 h-8 w-8" /> */}
-              <p className="font-semibold">Alamat Jasa Pengelasan Kami:</p>
+              <p className="font-semibold">Alamat Jasa Pengelasan Bocah Teknik:</p>
             </div>
             <p className="text-sm text-left">
               Kedongdowo Wetan RT 18/RW 04, Pampang, Kecamatan Paliyan, Kabupaten Gunungkidul, Daerah Istimewa Yogyakarta
@@ -74,7 +74,7 @@ export default function ContactInfo() {
               <div className="flex flex-col">
                 <p className="text-md text-green-600 group-hover:text-green-500">WhatsApp</p>
                 <p className="text-sm"
-                >+62-896-3760-6973 <span className='group-hover:text-green-500'>(click me!)</span></p>
+                >+62-896-3760-6973 (Mas Imam) <span className='group-hover:text-green-500'>(click me!)</span></p>
               </div>
             </a>
             <a

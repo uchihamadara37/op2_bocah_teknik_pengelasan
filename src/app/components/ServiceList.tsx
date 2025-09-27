@@ -35,9 +35,9 @@ export default function ServiceList() {
   return (
     <section className="container mx-auto py-10 px-4">
       <div className="text-center mb-12">
-        <h2 className="text-2xl md:text-3xl font-bold tracking-tight">Layanan Unggulan Kami</h2>
+        <h2 className="text-2xl md:text-3xl font-bold tracking-tight">Layanan Unggulan Bocah Teknik</h2>
         <p className="text-muted-foreground mt-2">
-          Berikut adalah beberapa layanan yang kami tawarkan, lengkap dengan contoh hasil pengerjaan.
+          Berikut adalah beberapa layanan yang kami tawarkan, untuk informasi lebih lengkap silakan <span className="font-bold text-blue-500">klik detail layanan</span> yang diinginkan.
         </p>
       </div>
 
