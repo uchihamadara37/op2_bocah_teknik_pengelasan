@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bocahteknik.my.id/sitemap.xml
+Sitemap: https://www.bocahteknik.my.id/sitemap.xml
