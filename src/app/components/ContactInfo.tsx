@@ -24,7 +24,7 @@ export default function ContactInfo() {
           <div className="flex flex-col bg-white p-3 rounded-md">
             <div className="alamat flex items-center gap-2 mb-1">
               {/* <IoMapSharp className="text-red-500 h-8 w-8" /> */}
-              <p className="font-semibold">Alamat:</p>
+              <p className="font-semibold">Alamat Jasa Pengelasan Kami:</p>
             </div>
             <p className="text-sm text-left">
               Kedongdowo Wetan RT 18/RW 04, Pampang, Kecamatan Paliyan, Kabupaten Gunungkidul, Daerah Istimewa Yogyakarta

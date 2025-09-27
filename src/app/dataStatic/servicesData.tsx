@@ -3,12 +3,12 @@ const servicesData = [
   {
     title: 'Pagar Besi',
     description: 'Kami membuat dan memasang pagar besi minimalis, tempa, dan modern untuk keamanan dan keindahan properti Anda. Material kuat dan tahan lama.',
-    images: ['/images/pagar-1.jpg', '/images/pagar-2.jpg', '/images/pagar-3.jpg'],
+    images: ['/produk/pagarBesi1.png', '/produk/pagarBesi2.jpeg', '/produk/pagarBesi3.jpeg'],
   },
   {
     title: 'Kanopi (Canopy)',
     description: 'Pemasangan kanopi baja ringan dengan berbagai pilihan atap (spandek, polikarikarbonat, dll) untuk melindungi carport atau teras Anda dari cuaca.',
-    images: ['/produk/kanopi.jpeg', '/images/kanopi-2.jpg', '/images/kanopi-3.jpg'],
+    images: ['/produk/kanopi.jpeg', '/produk/kanopi1.jpeg', '/produk/kanopi2.jpg', '/produk/kanopi3.jpg'],
   },
   {
     title: 'Folding Gate',
@@ -18,83 +18,62 @@ const servicesData = [
   {
     title: 'Rolling Door',
     description: 'Menyediakan rolling door industrial maupun untuk kios dengan material berkualitas yang menjamin keamanan dan kemudahan akses.',
-    images: ['/images/gerbang.jpg', '/images/gerbang2.png', '/images/gerbang3.jpg'],
+    images: ['/produk/rollingDoor1.jpg', '/produk/rollingDoor2.png', '/produk/rollingDoor3.jpg', '/produk/rollingDoor4.jpg'],
   },
   {
     title: 'Balkon (Balcon)',
     description: 'Pembuatan dan pemasangan railing balkon yang aman dan estetik, dengan desain minimalis atau kustom sesuai arsitektur bangunan.',
-    images: ['/images/balkon-1.jpg', '/images/balkon-2.jpg', '/images/balkon-3.jpg'],
+    images: ['/produk/balkon1.avif', '/produk/balkon2.jpg', '/produk/balkon3.jpg'],
   },
-
-  // Baris 2
   {
     title: 'Etalase Kaca',
     description: 'Mengerjakan etalase kaca dengan rangka aluminium atau besi untuk display produk toko, konter, atau pameran dengan presisi dan tampilan modern.',
-    images: ['/produk/etalase(12).jpg', '/images/etalase-2.jpg', '/images/etalase-3.jpg'],
+    images: ['/produk/etalaseKaca1.jpg', '/produk/etalaseKaca2.jpg', '/produk/etalaseKaca3.jpg'],
   },
   {
     title: 'Tenda',
     description: 'Pembuatan rangka tenda yang kokoh untuk berbagai keperluan acara, pameran, atau pedagang kaki lima. Kuat, awet, dan mudah dibongkar pasang.',
-    images: ['/images/tenda-1.jpg', '/images/tenda-2.jpg', '/images/tenda-3.jpg'],
+    images: ['/produk/tenda1.jpeg', '/produk/tenda2.jpg', '/produk/tenda3.png'],
   },
   {
-    title: 'Tralis',
+    title: 'Teralis',
     description: 'Pemasangan teralis jendela dan pintu untuk meningkatkan keamanan hunian Anda tanpa mengurangi estetika, tersedia dalam berbagai motif.',
-    images: ['/images/tralis-1.jpg', '/images/tralis-2.jpg', '/images/tralis-3.jpg'],
+    images: ['/produk/teralis1.jpg', '/produk/teralis2.jpg', '/produk/teralis3.webp', '/produk/teralis4.jpg', '/produk/teralis5.webp'],
   },
   {
     title: 'Railing Tangga',
     description: 'Membuat railing tangga besi dan stainless steel yang fungsional dan elegan, memberikan keamanan sekaligus sentuhan artistik pada interior.',
-    images: ['/produk/tanggaBesi.jpeg', '/images/railing-tangga-2.jpg', '/images/railing-tangga-3.jpg'],
+    images: ['/produk/tanggaBesi.jpeg', '/produk/railingTangga1.webp', '/produk/railingTangga2.png', '/produk/railingTangga3.webp'],
   },
-  {
-    title: 'Plafon PVC',
-    description: 'Jasa pemasangan plafon PVC dengan rangka hollow, memberikan tampilan langit-langit yang modern, anti air, dan mudah perawatannya.',
-    images: ['/images/plafon-pvc-1.jpg', '/images/plafon-pvc-2.jpg', '/images/plafon-pvc-3.jpg'],
-  },
-  
-  // Baris 3
   {
     title: 'Reklame',
     description: 'Pembuatan rangka papan reklame atau billboard dari besi siku dan pipa yang kokoh dan aman untuk promosi bisnis Anda di ruang outdoor.',
-    images: ['/images/reklame-1.jpg', '/images/reklame-2.jpg', '/images/reklame-3.jpg'],
+    images: ['/produk/reklame1.jpeg', '/produk/reklame2.webp', '/produk/reklame3.jpg', '/produk/reklame4.webp'],
   },
   {
     title: 'Huruf Timbul',
     description: 'Mengerjakan huruf timbul (letter sign) dari bahan galvanis atau stainless untuk identitas toko, kantor, atau kafe yang terlihat profesional.',
-    images: ['/images/huruf-timbul-1.jpg', '/images/huruf-timbul-2.jpg', '/images/huruf-timbul-3.jpg'],
+    images: ['/produk/hurufTimbul.jpeg', '/produk/hurufTimbul2.jpg', '/produk/hurufTimbul3.jpg'],
   },
   {
     title: 'Meja atau Kursi',
     description: 'Jasa las untuk pembuatan meja custom dengan kaki besi, seperti meja kafe, meja kerja, atau meja makan dengan desain industrial yang kokoh.',
-    images: ['/produk/Meja-Cafe.jpg', '/images/meja-2.jpg', '/images/meja-3.jpg'],
+    images: ['/produk/Meja-Cafe.jpg', '/produk/mejaKursi1.jpg', '/produk/mejaKursi2.png', '/produk/mejaKursi3.jpg', '/produk/mejaKursi4.jpg', '/produk/mejaKursi5.jpg'],
   },
-  {
-    title: 'Almari',
-    description: 'Mengerjakan lemari atau loker dari bahan plat besi yang awet dan aman, cocok untuk penggunaan di kantor, pabrik, atau gym.',
-    images: ['/images/almari-1.jpg', '/images/almari-2.jpg', '/images/almari-3.jpg'],
-  },
-
-  // Baris 4
   {
     title: 'Mainan TK',
     description: 'Pembuatan mainan outdoor untuk taman kanak-kanak seperti ayunan, perosotan, dan panjatan dengan rangka besi yang aman dan dicat menarik.',
-    images: ['/images/mainan-tk-1.jpg', '/images/mainan-tk-2.jpg', '/images/mainan-tk-3.jpg'],
+    images: ['/produk/mainanTk1.jpg', '/produk/mainanTk2.jpg', '/produk/mainanTk3.png', '/produk/mainanTk4.jpg', '/produk/mainanTk5.jpg'],
   },
   {
     title: 'Tempat Tidur',
     description: 'Membuat rangka tempat tidur atau ranjang tingkat dari besi hollow yang kuat, awet, dan tidak mudah reyot dengan desain minimalis.',
-    images: ['/images/ranjang-1.jpg', '/images/ranjang-2.jpg', '/images/ranjang-3.jpg'],
-  },
-  {
-    title: 'Lisplang ACP',
-    description: 'Jasa pemasangan lisplang menggunakan ACP (Aluminium Composite Panel) dan rangka besi hollow untuk tampilan fasad bangunan yang modern.',
-    images: ['/images/lisplang-acp-1.jpg', '/images/lisplang-acp-2.jpg', '/images/lisplang-acp-3.jpg'],
+    images: ['/produk/ranjang1.jpg', '/produk/ranjang2.jpg', '/produk/ranjang3.jpg'],
   },
   {
     title: 'Plafond (Besi)',
     description: 'Pengerjaan rangka plafond gantung (drop ceiling) menggunakan material besi hollow yang presisi dan kuat untuk interior bangunan.',
-    images: ['/images/rangka-plafond-1.jpg', '/images/rangka-plafond-2.jpg', '/images/rangka-plafond-3.jpg'],
+    images: ['/produk/plafon1.jpeg', '/produk/plafon2.jpg', '/produk/plafon3.webp', '/produk/plafon4.jpg', '/produk/plafon5.jpg'],
   },
 ];
 
