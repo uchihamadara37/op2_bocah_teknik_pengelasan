@@ -41,7 +41,7 @@ export function YoutubeCarousel() {
                 }
 
                 setVideos(data.videos || []);
-                console.log("Video yang berhasil diambil:", data.videos);
+                // console.log("Video yang berhasil diambil:", data.videos);
             } catch (err: unknown) {
                 console.error("Gagal mengambil video terbaru:", err);
                 setError(err instanceof Error ? err.message : "Gagal memuat video YouTube.");
@@ -53,42 +53,6 @@ export function YoutubeCarousel() {
         fetchLatestVideos();
     }, []);
 
-    // useEffect(() => {
-    //     const fetchVideoTitles = async () => {
-    //         try {
-    //             // Promise.all akan mengembalikan array berisi semua hasil fetch
-    //             const titles = await Promise.all(
-    //                 youtubeVideos.map(async (videoId) => {
-    //                     try {
-    //                         // Panggil API route Anda sendiri, bukan YouTube langsung
-    //                         const response = await fetch(`/api/youtubeTitle?videoId=${videoId}`);
-
-    //                         if (!response.ok) {
-    //                             console.error(`Gagal mengambil judul untuk video ${videoId}`);
-    //                             return 'Judul Tidak Tersedia'; // Nilai default jika gagal
-    //                         }
-
-    //                         const data = await response.json();
-    //                         return data.title || 'Judul Tidak Tersedia';
-    //                     } catch (error) {
-    //                         console.error(`Error saat fetch video ${videoId}:`, error);
-    //                         return 'Judul Tidak Tersedia';
-    //                     }
-    //                 })
-    //             );
-
-    //             console.log("Judul yang berhasil diambil:", titles);
-    //             setVideoTitles(titles);
-    //             // Di sini Anda bisa set state dengan array 'titles' yang sudah jadi
-    //             // setVideoTitles(titles); 
-
-    //         } catch (error) {
-    //             console.error("Gagal menjalankan semua fetch:", error);
-    //         }
-    //     };
-
-    //     fetchVideoTitles();
-    // }, []);
 
     // Fungsi untuk membuka popup
     const openVideoPopup = (videoId: string) => {
