@@ -7,6 +7,7 @@ import { ChevronLeft, ChevronRight, Loader2 } from 'lucide-react';
 import { ServiceFirestore } from '@/lib/firebaseBackend/firebaseAdmin';
 import { useViewport } from '@/lib/hooks/useViewport';
 import { Pagination } from './Pagination';
+import toast from 'react-hot-toast';
 
 // Komponen placeholder saat data sedang dimuat
 function ServiceCardSkeleton() {
@@ -27,15 +28,20 @@ export default function ServiceSection() {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [isLoading, setIsLoading] = useState(true);
-
   const { isMobile } = useViewport();
-  const ITEMS_PER_PAGE = isMobile ? 2 : 6; // Menampilkan 6 kartu per halaman
+  const [itemsPerPage, setItemsPerPage] = useState(isMobile ? 2 : 6); // Jumlah item per halaman
 
   useEffect(() => {
+    // toast.success(`Mode tampilan: ${isMobile ? 'Mobile' : 'Desktop'}`, { duration: 2000 });
+    setItemsPerPage(isMobile ? 2 : 6);
+  }, [isMobile]);
+
+  useEffect(() => {
+    // setItemsPerPage(isMobile ? 3 : 6);
     const fetchServices = async () => {
       setIsLoading(true);
       try {
-        const response = await fetch(`/api/services?page=${currentPage}&data_count=${ITEMS_PER_PAGE}`, {
+        const response = await fetch(`/api/services?page=${currentPage}&data_count=${itemsPerPage}`, {
           cache: 'no-store', // Selalu ambil data terbaru
         });
 
@@ -45,7 +51,8 @@ export default function ServiceSection() {
 
         const result = await response.json();
         setServices(result.data || []);
-        setTotalPages(result.metadata.last_page || 1);
+        // console.log("lastpage", result.metadata.last_page);
+        setTotalPages(result.metadata.last_page);
       } catch (error) {
         console.error("Error fetching services:", error);
         // Di sini Anda bisa menampilkan toast error jika mau
@@ -53,9 +60,10 @@ export default function ServiceSection() {
         setIsLoading(false);
       }
     };
-
+    
+    console.log("itemsPerPage upd", { itemsPerPage, isMobile});
     fetchServices();
-  }, [currentPage]); // Jalankan efek ini setiap kali `currentPage` berubah
+  }, [currentPage, itemsPerPage]); // Jalankan efek ini setiap kali `currentPage` berubah
 
   const handleNextPage = () => {
     if (currentPage < totalPages) {
@@ -85,7 +93,7 @@ export default function ServiceSection() {
       <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-opacity duration-300 ${isLoading ? 'opacity-50' : 'opacity-100'}`}>
         {isLoading ? (
           // Tampilkan 6 skeleton saat loading
-          Array.from({ length: ITEMS_PER_PAGE }).map((_, index) => (
+          Array.from({ length: itemsPerPage }).map((_, index) => (
             <ServiceCardSkeleton key={index} />
           ))
         ) : services.length > 0 ? (

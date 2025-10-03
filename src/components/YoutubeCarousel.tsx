@@ -110,14 +110,14 @@ export function YoutubeCarousel() {
             </div>
 
             {/* Galeri Video menggunakan Flexbox */}
-            <div className="flex flex-wrap justify-center gap-0">
+            <div className="flex flex-wrap justify-center gap-0 md:mx-[10%]">
                 {videos.map((video, index) => (
                     <div key={index} onClick={() => openVideoPopup(video.id)} className="basis-1/3 sm:basis-1/3 md:basis-1/3 cursor-pointer group">
                         <div className="p-1">
                             <div className="p-0 overflow-hidden rounded-lg">
                                 {/* Kontainer untuk menjaga rasio aspek 16:9 */}
                                 <div className="relative aspect-video w-full">
-                                    <div className="absolute top-1 left-1 right-1 md:top-2 md:left-3 md:right-3 drop-shadow-2xl text-white text-[9px] sm:text-xs md:text-sm lg:text-base font-semibold z-3">
+                                    <div className="absolute top-1 left-1 right-1 md:top-2 md:left-3 md:right-3 drop-shadow-2xl text-white text-[9px] sm:text-xs md:text-xs lg:text-base font-semibold z-3">
                                         {video.title || 'Memuat...'}
                                     </div>
                                     <div className="absolute inset-0 bg-black/20 z-2 transition-opacity duration-300 group-hover:bg-opacity-20"></div>
@@ -129,7 +129,7 @@ export function YoutubeCarousel() {
                                     {/* Ikon Play Overlay */}
                                     <div className="absolute inset-0 flex items-center justify-center z-4 transition-opacity duration-300">
                                         <div className="mx-auto my-auto bg-red-500 hover:bg-red-400 rounded-lg px-2 py-1 cursor-pointer">
-                                            <svg className="relative z-3 h-5 w-5 md:h-8 md:w-8 text-white group-hover:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="currentColor">
+                                            <svg className="relative z-3 h-5 w-5 md:h-6 md:w-6 lg:h-8 lg:w-8 text-white group-hover:opacity-100 transition-opacity" viewBox="0 0 24 24" fill="currentColor">
                                                 <path d="M8 5v14l11-7z" />
                                             </svg>
 

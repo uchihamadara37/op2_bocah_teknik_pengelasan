@@ -10,7 +10,7 @@ export async function GET(req: NextRequest) {
         const { searchParams } = new URL(req.url);
 
         const page = parseInt(searchParams.get('page') || '1', 10);
-        const dataCount = parseInt(searchParams.get('data_count') || '10', 10);
+        const dataCount = parseInt(searchParams.get('data_count') || "30", 10);
 
         if (page < 1 || dataCount < 1) {
             return NextResponse.json(
