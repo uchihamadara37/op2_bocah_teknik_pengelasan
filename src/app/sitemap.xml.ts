@@ -14,7 +14,7 @@ export async function GET() {
     </url>
     `
   ]
-
+  
   servicesData.forEach(service => {
     urls.push(`
       <url>

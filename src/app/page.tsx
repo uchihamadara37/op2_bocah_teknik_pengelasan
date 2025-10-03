@@ -1,9 +1,9 @@
-import ContactInfo from "./components/ContactInfo";
-import Footer from "./components/Footer";
-import Gallery from "./components/Gallery";
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
-import ServiceList from "./components/ServiceList";
+import ContactInfo from "../components/ContactInfo";
+import Footer from "../components/Footer";
+import Gallery from "../components/Gallery";
+import Hero from "../components/Hero";
+import Navbar from "../components/Navbar";
+import ServiceList from "../components/ServiceList";
 
 function LocalBusinessSchema() {
   const schema = {
