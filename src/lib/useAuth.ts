@@ -113,6 +113,7 @@ export function useAuth() {
         } catch (error) {
           // Jika verifikasi gagal, hapus cookie yang tidak valid
           console.error("Verification failed, logging out:", error);
+          await auth.signOut();
           setUser(null);
           setToken(null);
           Cookies.remove(AUTH_COOKIE_KEY);
