@@ -1,3 +1,4 @@
+import { YoutubeCarousel } from "@/components/YoutubeCarousel";
 import ContactInfo from "../components/ContactInfo";
 import Footer from "../components/Footer";
 import Gallery from "../components/Gallery";
@@ -37,6 +38,7 @@ export default function HomePage() {
       <main>
         
         <Hero />
+        <YoutubeCarousel />
         <ServiceList />
         {/* <Gallery /> */}
         <ContactInfo />
