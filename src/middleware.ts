@@ -3,7 +3,7 @@ import type { NextRequest } from 'next/server';
 import * as jose from 'jose';
 
 // Daftar email admin yang diizinkan
-const ALLOWED_ADMIN_EMAILS = ['andreamusholin@gmail.com', 'adminlain@example.com'];
+const ALLOWED_ADMIN_EMAILS = ['andreamusholin@gmail.com', 'bocahteknik01@example.com', 'imamnura03@gmail.com'];
 
 /**
  * Memverifikasi Firebase ID Token di Edge Runtime.
