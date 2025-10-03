@@ -9,7 +9,6 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { LogOut, User as UserIcon, Loader2 } from 'lucide-react';
 import Image from 'next/image';
-import { ServiceFirestore } from '@/lib/firebaseBackend/firebaseAdmin';
 
 export default function AdminPage() {
   const router = useRouter();
@@ -37,7 +36,7 @@ export default function AdminPage() {
   };
 
   // Fungsi yang dipanggil saat sebuah baris di tabel diklik
-  const handleRowClick = (serviceData: any) => {
+  const handleRowClick = (serviceData: ServiceFormData) => {
     setSelectedService(serviceData);
     // Scroll ke atas agar form edit terlihat
     window.scrollTo({ top: 0, behavior: 'smooth' });

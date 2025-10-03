@@ -22,6 +22,7 @@ import { Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { styleText } from 'util';
 import { useViewport } from '@/lib/hooks/useViewport';
+import { ServiceFormData } from './ServiceForm';
 
 type Service = {
     title: string;
@@ -32,7 +33,7 @@ type Service = {
 
 interface ServicesTableProps {
     refresh?: boolean;
-    onRowClick?: (serviceData: Service) => void;
+    onRowClick?: (serviceData: ServiceFormData) => void;
 }
 
 const columnHelper = createColumnHelper<Service>();
@@ -64,8 +65,8 @@ export default function ServicesTable({ refresh, onRowClick }: ServicesTableProp
 
                 const dummy: Service[] = result.data || [];
                 setData(dummy);
-            } catch (error: any) {
-                toast.error(`Gagal menambahkan layanan: ${error.message}`);
+            } catch (error: unknown) {
+                toast.error(`Gagal menambahkan layanan: ${error instanceof Error ? error.message : error}`);
             } finally {
                 setIsLoading(false);
             }
@@ -97,8 +98,8 @@ export default function ServicesTable({ refresh, onRowClick }: ServicesTableProp
                 throw new Error(result.error || 'Terjadi kesalahan pada server');
             }
             toast.success('Layanan berhasil dihapus!');
-        } catch (error: any) {
-            toast.error(`Gagal menghapus layanan: ${error.message}`);
+        } catch (error: unknown) {
+            toast.error(`Gagal menghapus layanan: ${error instanceof Error ? error.message : error}`);
         } finally {
             setIsLoading(false);
             setReloadFlag(!reloadFlag) // Memicu refresh pada tabel
@@ -161,7 +162,7 @@ export default function ServicesTable({ refresh, onRowClick }: ServicesTableProp
                             size="sm"
                             onClick={() => {
                                 if (onRowClick) {
-                                    onRowClick(row.original);
+                                    onRowClick(row.original as ServiceFormData);
                                 }
                                 console.log('Edit:', row.original.slug)
                             }}

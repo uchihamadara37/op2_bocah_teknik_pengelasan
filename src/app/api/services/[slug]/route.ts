@@ -5,10 +5,10 @@ import { NextRequest, NextResponse } from 'next/server';
 // GET /api/services/[slug]
 export async function GET(
   req: NextRequest,
-  { params }: { params: { slug: string } }
+  context: { params: Promise<{ slug: string; }> }
 ) {
   try {
-    const { slug } = await params;
+    const { slug } = await context.params;
     const doc = await db.collection('services').doc(slug).get();
 
     if (!doc.exists) {
@@ -30,9 +30,9 @@ export async function GET(
 // PUT /api/services/[slug]
 export async function PUT(
   req: NextRequest,
-  { params }: { params: { slug: string } }
+  context: { params: Promise<{ slug: string; }>; }
 ) {
-  const { slug } = await params;
+  const { slug } = await context.params;
 
   try {
     // Cek apakah dokumen ada
@@ -51,8 +51,8 @@ export async function PUT(
 
     // Ambil data lama dari Firestore
     const existingData = docSnap.data() as ServiceFirestore;
-    let existingImageUrls: string[] = existingData.images || [];
-    let imageUrlEditedToDelete: string[] = existingImageUrls.filter(url => !imageUrlEdited.includes(url));
+    const existingImageUrls: string[] = existingData.images || [];
+    const imageUrlEditedToDelete: string[] = existingImageUrls.filter(url => !imageUrlEdited.includes(url));
 
     // Hapus gambar yang sudah tidak ada di edit form dari Cloudinary
     for (const url of imageUrlEditedToDelete) {
@@ -81,7 +81,7 @@ export async function PUT(
     });
 
     return NextResponse.json({ message: 'Service updated successfully' });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error(error);
     return NextResponse.json({ error: 'Failed to update service' }, { status: 500 });
   }
@@ -90,9 +90,9 @@ export async function PUT(
 // DELETE /api/services/[slug]
 export async function DELETE(
   req: NextRequest,
-  { params }: { params: { slug: string } }
+  context: { params: Promise<{ slug: string; }>; }
 ) {
-  const { slug } = await params;
+  const { slug } = await context.params;
 
   try {
     const docRef = db.collection('services').doc(slug);
@@ -102,7 +102,7 @@ export async function DELETE(
       return NextResponse.json({ error: 'Service not found' }, { status: 404 });
     }
 
-    const data = docSnap.data() as any;
+    const data = docSnap.data() as ServiceFirestore;
     const images = data.images || [];
 
     for (const url of images) {

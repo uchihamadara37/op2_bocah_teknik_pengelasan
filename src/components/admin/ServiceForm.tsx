@@ -24,7 +24,7 @@ export interface ServiceFormData {
 // Tipe props untuk komponen
 interface ServiceFormProps {
     onSuccess: () => void;
-    initialData?: any | null;
+    initialData?: ServiceFormData | null;
 }
 
 export default function ServiceForm({ onSuccess, initialData }: ServiceFormProps) {
@@ -51,7 +51,7 @@ export default function ServiceForm({ onSuccess, initialData }: ServiceFormProps
                 description: initialData.description || '',
                 longDescription: initialData.longDescription || '',
                 images: [],
-                imageUrlEdited: initialData.images || [],
+                imageUrlEdited: initialData.images as string[] || [],
             });
             setIsEditMode(true);
         } else {
@@ -184,8 +184,8 @@ export default function ServiceForm({ onSuccess, initialData }: ServiceFormProps
             }
 
             onSuccess(); // Memanggil fungsi dari parent untuk refresh & reset
-        } catch (error: any) {
-            toast.error(`Gagal menyimpan layanan: ${error.message}`);
+        } catch (error: unknown) {
+            toast.error(`Gagal menyimpan layanan: ${error}`);
         } finally {
             setIsLoading(false);
         }
@@ -263,7 +263,7 @@ export default function ServiceForm({ onSuccess, initialData }: ServiceFormProps
                                     src={image instanceof File ? URL.createObjectURL(image) : image}
                                     alt={`preview ${index}`}
                                     className="h-20 w-20 rounded object-cover"
-                                    onLoad={image instanceof File ? () => URL.revokeObjectURL(image as any) : undefined}
+                                    onLoad={image instanceof File ? () => URL.revokeObjectURL(image.name) : undefined}
                                 />
                                 <X onClick={() => removeImage(index)} className="absolute -top-2 -right-2 bg-red-600 text-white rounded-full h-5 w-5 p-1" />
                             </div>
