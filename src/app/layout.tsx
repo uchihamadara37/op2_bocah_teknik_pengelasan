@@ -28,9 +28,8 @@ export const metadata: Metadata = {
       { url: '/favicon.ico', type: 'image/x-icon' },
       { url: '/favicon.svg', type: 'image/svg+xml' },
       { url: '/favicon-96x96.png', type: 'image/png', sizes: '96x96' },
-      // Anda bisa menambahkan ukuran lain di sini jika ada
-      // { url: '/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
-      // { url: '/favicon-16x16.png', type: 'image/png', sizes: '16x16' },
+      { url: '/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
+      { url: '/favicon-16x16.png', type: 'image/png', sizes: '16x16' },
     ],
     // Ikon untuk 'Add to Home Screen' di perangkat Apple
     apple: [
@@ -44,6 +43,9 @@ export const metadata: Metadata = {
     title: "BocahTeknik",
     // Anda juga bisa menambahkan 'statusBarStyle' dan 'startupImage' di sini
   },
+  other: {
+    'application-name': 'Bocah Teknik',
+  },
 };
 
 export default function RootLayout({
@@ -52,7 +54,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
