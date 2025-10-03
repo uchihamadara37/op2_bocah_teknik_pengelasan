@@ -1,8 +1,12 @@
-import servicesData from './dataStatic/servicesData'
+import { ServiceFirestore } from '@/lib/firebaseBackend/firebaseAdmin'
 import { NextResponse } from 'next/server'
 
 export async function GET() {
   const baseUrl = 'https://www.bocahteknik.my.id'
+
+  const servicesRes = await fetch(`${baseUrl}/api/services`, { cache: 'no-store' })
+  const servicesJson = await servicesRes.json()
+  const servicesData = servicesJson.data as ServiceFirestore[] || []
 
   const urls = [
     `
@@ -15,6 +19,7 @@ export async function GET() {
     `
   ]
   
+
   servicesData.forEach(service => {
     urls.push(`
       <url>

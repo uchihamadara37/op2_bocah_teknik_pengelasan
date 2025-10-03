@@ -8,13 +8,13 @@ import { Button } from './ui/button';
 import { FaYoutube } from 'react-icons/fa';
 
 // Daftar video YouTube [id, judul]
-const youtubeVideos = [
-    "dQw4w9WgXcQ", // Ganti dengan ID video Anda
-    "3JZ_D3ELwOQ", // Ganti dengan ID video Anda
-    "L_LUpnjgPso", // Ganti dengan ID video Anda
-    "8-tH6p-2-oI", // Ganti dengan ID video Anda
-    "u_Fz1z11kAw", // Ganti dengan ID video Anda
-];
+// const youtubeVideos = [
+//     "dQw4w9WgXcQ", // Ganti dengan ID video Anda
+//     "3JZ_D3ELwOQ", // Ganti dengan ID video Anda
+//     "L_LUpnjgPso", // Ganti dengan ID video Anda
+//     "8-tH6p-2-oI", // Ganti dengan ID video Anda
+//     "u_Fz1z11kAw", // Ganti dengan ID video Anda
+// ];
 
 export function YoutubeCarousel() {
     // State untuk menyimpan ID video yang sedang aktif di popup

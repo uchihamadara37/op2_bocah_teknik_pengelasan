@@ -14,7 +14,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
-import { Service } from '../app/dataStatic/servicesData';
 import { ServiceFirestore } from '@/lib/firebaseBackend/firebaseAdmin';
 import { ImageWithLoader } from './ImageWithLoader';
 
@@ -31,11 +30,12 @@ export function ServiceCard({ service }: ServiceCardProps) {
           <CarouselContent>
             {service.images.map((imageSrc, index) => (
               <CarouselItem key={index}>
-                <div className="relative aspect-video w-full">
-                  <ImageWithLoader
+                <div className="relative aspect-video w-full h-full">
+                  <Image
                     src={imageSrc}
                     alt={`${service.title} - gambar ${index + 1}`}
                     fill
+                    sizes="(max-width: 768px) 100vw, 40vw"
                     className="object-cover"
                   />
                 </div>
